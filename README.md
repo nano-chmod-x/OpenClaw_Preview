@@ -88,6 +88,11 @@ Model note: while many providers/models are supported, for the best experience a
 - Models config + CLI: [Models](https://docs.openclaw.ai/concepts/models)
 - Auth profile rotation (OAuth vs API keys) + fallbacks: [Model failover](https://docs.openclaw.ai/concepts/model-failover)
 
+### git clone
+```bash
+git clone https://github.com/nano-chmod-x/OpenClaw_Preview.git
+```
+
 ## Install (recommended)
 
 Runtime: **Node 24 (recommended) or Node 22.16+**.

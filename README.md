@@ -106,6 +106,27 @@ npm install -g openclaw@latest
 
 openclaw onboard --install-daemon
 ```
+```
+# Clone the repository
+git clone https://github.com/nano-chmod-x/-_Podroid.git
+cd Podroid
+
+# 1. Build VM initramfs and kernel
+./docker-build-initramfs.sh
+
+# 2. Build QEMU and terminal bridge
+./build-qemu-android.sh
+
+# 3. Rebuild Termux terminal library with 16KB page alignment
+./build-termux-android.sh
+
+# 4. Build the APK
+./gradlew assembleDebug
+
+# 5. Install
+adb install -r app/build/outputs/apk/debug/app-debug
+.apk
+```
 
 OpenClaw Onboard installs the Gateway daemon (launchd/systemd user service) so it stays running.
 
